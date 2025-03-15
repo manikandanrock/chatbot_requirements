@@ -41,6 +41,7 @@ Create a `.env` file in the root directory and add your Gemini API key:
 
 ```env
 GEMINI_API_KEY=your_gemini_api_key_here
+```
 ---
 
 ### Installation
