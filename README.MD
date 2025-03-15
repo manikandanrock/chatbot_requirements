@@ -101,6 +101,10 @@ Node.js- 22.14.0
 1. Navigate to the statistics page.
 2. View system-wide statistics, including the total number of requirements, approved requirements, and requirements in review.
 
+### Chatbot
+1. Ask the Gemini Ai powered chatbot to get insights about the requiremnts.
+2. It provieds the needed domain knowledge to work with the project and requirements.
+
 ---
 
 ## API Endpoints
