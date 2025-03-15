@@ -36,15 +36,16 @@ This project is an AI-powered requirements management system designed to help te
 3. **Node.js (Optional)**: If you're using a React frontend, ensure Node.js is installed.
 
 ---
-### Installation
-
-### Creating virtual environmnet and installing necessary packages
-
 ### Set Up Environment Variables
 Create a `.env` file in the root directory and add your Gemini API key:
 
 ```env
 GEMINI_API_KEY=your_gemini_api_key_here
+---
+
+### Installation
+
+### Creating virtual environmnet and installing necessary packages
 
 ```sh
 # New Terminal 1   
