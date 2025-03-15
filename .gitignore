@@ -1,0 +1,79 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Environment Variables
+.env
+
+
+# Build and Output Files
+dist/
+build/
+uploads/
+
+# VS Code settings
+.vscode/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.py.class
+*.egg-info/
+*.egg
+*.manifest
+*.spec
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Local database
+requirements.db
+*.sqlite
+*.db-journal
+
+# Uploads directory
+/uploads/
+!uploads/.gitkeep
+
+# IDE specific
+.vscode/
+.idea/
+*.iml
+*.swp
+*.swo
+
+# Virtual environment
+venv/
+env/
+ENV/
+pythonenv*
+
+# Build/Test artifacts
+dist/
+build/
+.coverage
+htmlcov/
+.pytest_cache/
+.coverage.*
+*.mo
+*.pot
+
+# Logs
+*.log
+logs/
+
+# macOS
+.DS_Store
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini

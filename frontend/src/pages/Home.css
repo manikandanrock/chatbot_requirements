@@ -1,0 +1,174 @@
+/* Color Variables */
+:root {
+  --primary: #6366f1;
+  --secondary: #4f46e5;
+  --accent: #10b981;
+  --background: #f8fafc;
+  --text: #0f172a;
+  --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.home-container {
+  padding: 4rem 1.5rem;
+  background: var(--background);
+}
+
+.workflow-section {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.workflow-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-subtitle {
+  color: var(--primary);
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  color: var(--text);
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.section-description {
+  color: #64748b;
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.workflow-grid {
+  display: grid;
+  gap: 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  position: relative;
+}
+
+.step-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.step-card:hover {
+  transform: translateY(-5px);
+}
+
+.step-header {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.step-icon-container {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: white;
+  position: relative;
+  z-index: 2;
+}
+
+.step-icon-container.upload { background: var(--primary); }
+.step-icon-container.analyze { background: #8b5cf6; }
+.step-icon-container.validate { background: var(--accent); }
+.step-icon-container.insights { background: #3b82f6; }
+
+.step-progress {
+  position: absolute;
+  height: 2px;
+  background: #e2e8f0;
+  top: 50%;
+  left: 60px;
+  right: -2.5rem;
+  transform: translateY(-1px);
+  z-index: 1;
+}
+
+.step-title {
+  color: var(--text);
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.step-description {
+  color: #64748b;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.step-cta {
+  color: var(--secondary);
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.step-cta:hover {
+  color: var(--primary);
+}
+
+.cta-arrow {
+  transition: transform 0.3s ease;
+}
+
+.step-cta:hover .cta-arrow {
+  transform: translateX(3px);
+}
+
+.ai-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: var(--accent);
+  color: white;
+  font-size: 0.7rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 1rem;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .workflow-grid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+  
+  .step-progress {
+    display: none;
+  }
+  
+  .step-card {
+    text-align: center;
+  }
+  
+  .step-icon-container {
+    margin: 0 auto;
+  }
+  
+  .step-cta {
+    justify-content: center;
+  }
+}
