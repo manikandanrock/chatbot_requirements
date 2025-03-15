@@ -1,50 +1,50 @@
-# AI-Powered Requirements Analysis System
+# AI-Powered Requirements Management System
 
-## Overview
+This project is an AI-powered requirements management system designed to help teams classify, prioritize, and manage software requirements efficiently. It uses the **Gemini API** for natural language processing (NLP) to classify requirements into categories such as Functional, Non-Functional, UI, Security, and Performance. The system also estimates priority, complexity, and development time for each requirement.
 
-An intelligent system for automated requirement extraction, classification, and analysis. Processes documents (PDF/TXT) to identify and categorize software requirements with AI-powered insights and chatbot integration.
+---
 
-## Key Features
+## Features
 
-- **Document Analysis**  
-  Upload and analyze requirement documents (PDF/TXT/MD)
-- **AI Classification**  
-  Automatic categorization using NLP models (BART + spaCy)
-- **Smart Metadata Extraction**  
-  Detect authors, dates, and technical specifications
-- **Requirement Management**  
-  Database storage with filtering/search capabilities
-- **Analytics Dashboard**  
-  Real-time statistics and reporting
+- **File Upload**: Upload requirements in `.txt`, `.md`, or `.pdf` format.
+- **AI Classification**: Automatically classify requirements into categories using the Gemini API.
+- **Priority and Complexity Estimation**: Estimate the priority (High, Medium, Low) and complexity (High, Moderate, Low) of each requirement.
+- **Database Storage**: Store requirements in a SQLite database for easy retrieval and management.
+- **Search and Filter**: Search and filter requirements by category, status, priority, or complexity.
+- **Statistics**: View system-wide statistics, including the total number of requirements, approved requirements, and requirements in review.
 
-## Enhanced Tech Stack
+---
 
-### Backend Services:
-- **Python 3.12** (Flask REST API)
-- **SQLAlchemy** (Database ORM)
-- **spaCy** (NLP processing)
-- **Hugging Face Transformers** (BART classification)
-- **pdfminer.six** (PDF text extraction)
+## Technologies Used
 
-### Frontend Interface:
-- **React.js** (UI Framework)
-- **Material UI** (Design System)
-- **Axios** (API Client)
+- **Backend**: Flask (Python)
+- **Frontend**: React (if applicable)
+- **Database**: SQLite
+- **AI/ML**: Gemini API for NLP-based classification
+- **File Processing**: `pdfminer` for PDF text extraction
+- **Logging**: Python `logging` module
+- **Environment Management**: `python-dotenv`
 
-## System Setup
+---
 
-### Prerequisites
-- Python 3.12+
-- Node.js 18+
-- Git
+## Setup Instructions
 
 ### Prerequisites
 
-- Python 3.x
-- Node.js & npm
-- Git
+1. **Python 3.8+**: Ensure Python is installed on your system.
+2. **Gemini API Key**: Obtain an API key from [Google Cloud Console](https://console.cloud.google.com/).
+3. **Node.js (Optional)**: If you're using a React frontend, ensure Node.js is installed.
+
+---
+### Installation
 
 ### Creating virtual environmnet and installing necessary packages
+
+### Set Up Environment Variables
+Create a `.env` file in the root directory and add your Gemini API key:
+
+```env
+GEMINI_API_KEY=your_gemini_api_key_here
 
 ```sh
 # New Terminal 1   
@@ -78,12 +78,41 @@ An intelligent system for automated requirement extraction, classification, and 
 Python- 3.12.6
 Node.js- 22.14.0
 ```
-### API Endpoints
-- /api/upload	POST	File upload and processing
-- /api/analyze	POST	Document analysis pipeline
-- /api/chat	POST	AI chatbot interface (yet to be implemented)
-- /api/requirements	GET	Retrieve requirements
-- /api/health	GET	System status check
+## Usage
+
+### Upload Requirements
+1. Navigate to the file upload page.
+2. Upload a `.txt`, `.md`, or `.pdf` file containing your requirements.
+3. The system will automatically classify the requirements and display the results.
+
+### View Requirements
+1. Navigate to the requirements page.
+2. Use the search and filter options to find specific requirements.
+3. View details such as category, priority, complexity, and estimated time.
+
+### Update Requirements
+1. Click on a requirement to view its details.
+2. Update the status, priority, or complexity as needed.
+3. Save your changes.
+
+### View Statistics
+1. Navigate to the statistics page.
+2. View system-wide statistics, including the total number of requirements, approved requirements, and requirements in review.
+
+---
+
+## API Endpoints
+
+### Backend API
+- **POST `/api/upload`**: Upload a file for analysis.
+- **POST `/api/analyze`**: Analyze the uploaded file and classify requirements.
+- **GET `/api/requirements`**: Retrieve all requirements.
+- **POST `/api/requirements`**: Create a new requirement.
+- **GET `/api/requirements/<req_id>`**: Retrieve a specific requirement.
+- **PUT `/api/requirements/<req_id>`**: Update a specific requirement.
+- **DELETE `/api/requirements/<req_id>`**: Delete a specific requirement.
+- **PATCH `/api/requirements/<req_id>/status`**: Update the status of a requirement.
+- **GET `/api/requirements/stats`**: Retrieve system-wide statistics.
 
 ### Key Enhancements
 
